@@ -1,0 +1,23 @@
+.component {
+  background-color: #1E212C;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu-item {
+  margin: 0 16px
+}
+
+.menu-item-small {
+  margin: 0 6px
+}
+
+.center-menu-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
