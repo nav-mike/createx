@@ -6,7 +6,7 @@ const sliderReducer = (state: State = initialState, action: SliderAction) => {
     case FETCH_SLIDER_DATA:
       return {
         ...state,
-        sliderData: action.payload,
+        items: action.payload.items,
       };
     default:
       return state;

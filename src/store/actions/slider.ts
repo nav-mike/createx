@@ -24,18 +24,16 @@ export const fetchSliderData = () => {
     }
 
     const data = await response.json();
-    console.log(
-      Object.keys(data).map((key) => {
-        return {
-          ...data[key],
-          id: key,
-        };
-      })
-    );
+    const items: SliderItem[] = Object.keys(data).map((key) => {
+      return {
+        ...data[key],
+        id: key,
+      };
+    });
     dispatch({
       type: FETCH_SLIDER_DATA,
       payload: {
-        items: [],
+        items,
       },
     });
   };

@@ -1,0 +1,12 @@
+.active {
+  color: #000000 !important;
+}
+
+.container {
+  color: rgba(143, 143, 143, 0.94);
+  font-weight: bold;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  width: 10rem;
+  padding-bottom: 1rem;
+}

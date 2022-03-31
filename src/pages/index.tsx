@@ -1,9 +1,10 @@
 import { FC } from "react";
+import Slider from "../components/slider";
 
 const Index: FC = () => {
   return (
     <div>
-      <h1>Hello World</h1>
+      <Slider />
     </div>
   );
 };
