@@ -11,6 +11,10 @@
   color: white;
   background-color: #1ea7fd;
 }
+.storybook-button--danger {
+  background-color: #e80909;
+  color: #ffffff;
+}
 .storybook-button--secondary {
   color: #333;
   background-color: transparent;
