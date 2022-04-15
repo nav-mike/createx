@@ -3,12 +3,12 @@ import Star from "./Star";
 
 interface IRatingProps {
   value: number;
+  className?: string;
 }
 
-const Rating: FC<IRatingProps> = ({ value = 0 }) => {
-  Array(value >= 5 ? 0 : 5 - value).map(() => console.log("1"));
+const Rating: FC<IRatingProps> = ({ value = 0, className = "" }) => {
   return (
-    <div>
+    <div className={className}>
       {Array(value >= 5 ? 5 : value)
         .fill(0)
         .map((_, index) => (

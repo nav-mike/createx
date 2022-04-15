@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { fetchNewArrivals } from "../store/actions/newArrivals";
 import { Link } from "react-router-dom";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/all";
+import Rating from "../stories/Rating";
 
 const NewArrivals: FC = () => {
   const products = useAppSelector((state) => state.newArrivals.items);
@@ -38,7 +39,12 @@ const NewArrivals: FC = () => {
         {chunks.length > 0 &&
           chunks[index].map((item) => (
             <div className={classes.product} key={item.id}>
-              <div>{parseInt((item.rating || "").toString())}</div>
+              <div className={classes.rating}>
+                <Rating
+                  className={classes["rating-item"]}
+                  value={parseInt((item.rating || "0").toString())}
+                />
+              </div>
               <img
                 className={classes["product-image"]}
                 alt={item.name}

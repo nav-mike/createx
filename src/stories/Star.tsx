@@ -6,10 +6,12 @@ interface IStarProps {
 }
 
 const Star: FC<IStarProps> = ({ filled = false }) => {
+  const size = "10px";
+
   return filled ? (
-    <AiFillStar color="#f89828" />
+    <AiFillStar size={size} color="#f89828" />
   ) : (
-    <AiOutlineStar color="#ccc" />
+    <AiOutlineStar size={size} color="#ccc" />
   );
 };
 
