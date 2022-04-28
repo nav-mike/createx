@@ -1,5 +1,5 @@
 import { FC } from "react";
-import classes from "./BannerCard.module.css";
+import "./BannerCard.css";
 import bg from "../assets/bg.png";
 import { Link } from "react-router-dom";
 
@@ -22,11 +22,10 @@ const BannerCard: FC<IBannerCardProps> = ({
   finishedAt,
 }) => {
   return (
-    <div className={classes.banner} style={{ backgroundImage: `url(${bg})` }}>
-      <img className={classes.image} src={image} alt={title} />
-      <div className={classes.subtitle}>{subtitle}</div>
+    <div className="banner" style={{ backgroundImage: `url(${image})` }}>
+      <div className="subtitle">{subtitle}</div>
       <div>{title}</div>
-      {buttonLabel && <a href={link || "/"}>{buttonLabel}</a>}
+      {buttonLabel && <Link to={link || "/"}>{buttonLabel}</Link>}
       <div>{children}</div>
       {finishedAt && <div>{finishedAt}</div>}
     </div>

@@ -1,9 +1,17 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import BannerCard from "./BannerCard";
+import { MemoryRouter } from "react-router-dom";
 
 export default {
   title: "BannerCard",
   component: BannerCard,
+  decorators: [
+    (Story: any) => (
+      <MemoryRouter>
+        <Story />
+      </MemoryRouter>
+    ),
+  ],
 } as ComponentMeta<typeof BannerCard>;
 
 const Template: ComponentStory<typeof BannerCard> = (args) => (
