@@ -22,6 +22,7 @@ const NewArrivals: FC = () => {
 
   const chunkSize = 6;
   const chunks = [];
+
   for (let i = 0; i < products.length; i += chunkSize) {
     chunks.push(products.slice(i, i + chunkSize));
   }
@@ -63,6 +64,19 @@ const NewArrivals: FC = () => {
               </div>
             </div>
           ))}
+      </div>
+      <div className={classes.indexes}>
+        {chunks.map((_, i) => (
+          <div
+            key={i}
+            className={`${classes.index} ${
+              i === index ? classes["active-index"] : ""
+            }`}
+            onClick={() => {
+              setIndex(i);
+            }}
+          />
+        ))}
       </div>
     </div>
   );
