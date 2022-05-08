@@ -40,6 +40,7 @@ const NewArrivals: FC = () => {
         {chunks.length > 0 &&
           chunks[index].map((item) => (
             <div className={classes.product} key={item.id}>
+              {index}
               <div className={classes.rating}>
                 <Rating
                   className={classes["rating-item"]}
